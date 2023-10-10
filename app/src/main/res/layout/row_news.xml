@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/categorylayout"
+    android:layout_width="match_parent"
+    android:layout_height="340dp"
+    android:padding="10dp"
+    android:clickable="true"
+    android:background="@drawable/ripple_effect"
+    android:orientation="vertical"
+    tools:context=".ui.profile.NotificationsFragment">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:cardCornerRadius="14dp"
+        app:cardElevation="4dp"
+        app:cardUseCompatPadding="true">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_home_black_24dp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:text="Nama Campaign nya apa anjasdf wdwd wdw asdasdsa "
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="4"
+            android:text="asdsadasadsa  aasdasdsa asdsad awdawd awd awdwad awdaw d awd awd awd awd awd wad kmawkod awmd kojnwad awn daw awdawidaw oidjwaiod jawiod jawiod jawiod jawiod ajwido awjd " />
+    </LinearLayout>
+</LinearLayout>
