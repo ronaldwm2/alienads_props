@@ -1,5 +1,44 @@
 plugins {
     id 'com.android.library'
+    id 'maven-publish'
+}
+
+group = 'com.props.adsmanager'
+version = '1.0'
+
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId = 'com.props.adsmanager'
+            artifactId = 'props-adsmanager'
+            version = '1.0'
+
+            pom {
+                name = 'props-adsmanager'
+                description = 'Props Aliendroid Adsmanager'
+                version = '1.0'
+                groupId = 'com.props.adsmanager'
+            }
+
+            afterEvaluate {
+                from components.release
+            }
+//            repositories {
+//                maven {
+//                    url "https://gitlab.com/api/v4/projects/51100142/packages/maven"
+//                    name "GitLab"
+//                    credentials(HttpHeaderCredentials) {
+//                        name = 'Private-Token'
+//                        value = 'glpat-PzjStyx5j4FDyeJCia41'
+//                    }
+//                    authentication {
+//                        header(HttpHeaderAuthentication)
+//                    }
+//                }
+//            }
+        }
+    }
 }
 
 android {
@@ -43,3 +82,5 @@ dependencies {
     implementation 'com.squareup.picasso:picasso:2.5.2'
     implementation(platform("org.jetbrains.kotlin:kotlin-bom:1.6.0"))
 }
+
+afterEvaluate {}
