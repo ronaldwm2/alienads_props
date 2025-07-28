@@ -30,7 +30,7 @@ publishing {
 //                    name "GitLab"
 //                    credentials(HttpHeaderCredentials) {
 //                        name = 'Private-Token'
-//                        value = 'glpat-PzjStyx5j4FDyeJCia41'
+//                        value = project.findProperty("gitlabToken") ?: System.getenv("GITLAB_TOKEN")
 //                    }
 //                    authentication {
 //                        header(HttpHeaderAuthentication)
