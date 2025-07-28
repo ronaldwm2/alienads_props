@@ -265,7 +265,6 @@ public class PropsAdsManagement extends LinearLayout {
         } finally {
             ta.recycle();
         }
-        initializeAdsManagement(context);
     }
 
     private void initializeAdsManagement(Context context) {
@@ -344,7 +343,7 @@ public class PropsAdsManagement extends LinearLayout {
         if (getMapping == null) {
             getMapping = this.adUnitId;
         }
-        adView.setAdUnitId(adUnitId);
+        adView.setAdUnitId(getMapping);
         adView.setAdSize(adSize);
         this.ads_linearlayout.addView(adView);
         return this.ads_linearlayout;
